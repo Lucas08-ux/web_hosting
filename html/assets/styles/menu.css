@@ -1,0 +1,741 @@
+/*MENU PORTRAIT*/
+
+.menu-portrait {
+    width: 100%;
+    height: auto;
+}
+
+.menu-portrait-img {
+    width: 100%;
+    height: 33vh;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/menu-portrait.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end; 
+    align-items: center; 
+    gap: .5rem; 
+}
+
+.menu-portrait-img h1 {
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+
+    animation: slide-down 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation-delay: 0.4s;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Double Arrow*/
+
+.arrow-icon {
+    width: 8vh;
+    height: 50%; 
+    cursor: pointer; 
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .8));
+    margin-bottom: 1rem;
+}
+
+.double-arrow:hover .arrow-icon {
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-portrait-img a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: slide-down 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/*MENU PRESENTATION*/
+
+.menu-presentation {
+    width: 100%;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-presentation-container {
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 2rem;
+}
+
+.menu-presentation-collage {
+    flex: 3;
+
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.collage-item {
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/*Las 9 imagenes del collage usando css grid*/
+
+.collage1 {
+    background-image: url("../img/menu/Menu2/injeolmi_bingsu.jpg");
+    height: 40vh;
+}
+
+.collage2 {
+    background-image: url("../img/menu/Menu2/kongnamul_gukbap.jpg");
+    height: 20vh;
+}
+
+.collage3 {
+    background-image: url("../img/menu/Menu1/bibimbap.jpg");
+    height: 40vh;
+}
+
+.collage4 {
+    background-image: url("../img/menu/Menu1/samgyeopsal.jpg");
+    height: 20vh;
+}
+
+.collage5 {
+    background-image: url("../img/menu/Menu2/sannakji.JPG");
+    height: 40vh;
+}
+
+.collage6 {
+    background-image: url("../img/menu/Menu1/hwe.jpg");
+    height: 20vh;
+}
+
+.collage7 {
+    background-image: url("../img/menu/Menu1/patbingsu.jpg");
+    height: 17.5vh;
+}
+
+.collage8 {
+    background-image: url("../img/menu/Menu2/bossam.jpg");    
+    height: 40vh;
+}
+
+.collage9 {
+    background-image: url("../img/menu/Menu2/yangnyeom_tongdak.jpg");
+    height: 20vh;
+}
+
+.link1 {
+    grid-row: 1 / 3;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.link2 {
+    grid-column: 2 / 4;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+}
+
+.link3 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.link4 {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+    animation-delay: 0.4s;
+
+}
+
+.link5 {
+    grid-row: 4 / 6;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.link6 {
+    grid-column: 2 / 4;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+}
+
+.link7 {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.link8 {
+    grid-row: 5 / 8;
+    grid-column: 3 / 3;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+}
+
+.link9 {
+    grid-column: 1 / 3;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-left 1s ease-out forwards;
+    animation-delay: 0.4s;
+
+}
+
+/*Animación para el collage*/
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*Pequeña transición de escala y brillo*/
+
+.menu-presentation-collage a:hover .collage-item {
+    transform: scale(1.03); 
+    filter: brightness(0.8); 
+}
+.menu-presentation-collage a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu-presentation-text {
+    flex: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+
+    gap: 2rem;
+
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-right 1s ease-out forwards;
+}
+
+.menu-presentation-text p {
+    color: var(--white-color);
+}
+
+.presentation-title h1 {
+    text-align: left;
+}
+
+.secret-presentation-title {
+    display: none;
+}
+
+/*MENU BOOKLET*/
+
+.booklet {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.booklet-container {
+    width: 70%;
+    height: auto;
+}
+
+.booklet-title {
+    padding-bottom: 3rem;
+    color: var(--brown-text-color);
+}
+
+.menus {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.menus h2 {
+    font-family: LouisGeorgeCafeBold;
+    font-variant: small-caps;
+    color: var(--brown-text-color);
+    text-align: center;
+}
+
+.menus h1 {
+    color: var(--brown-text-color);
+    font-size: clamp(1.2rem, 0.933rem + 0.889vw, 2rem);
+    text-align: center;
+}
+
+.menus h3 {
+    text-align: center;
+}
+
+.menu-1 {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-2 {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.beige-line {
+    width: 10vw;
+    height: 3px;
+    margin: .5rem;
+    background-color: var(--beige-line-color);
+
+    align-self: center;
+}
+
+.menu-start {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--section-color);
+    padding: 1.5rem;
+}
+
+.appetizers {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.appetizer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-courses {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: var(--section-color);
+    padding: 1.5rem;
+}
+
+.main-course {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.desserts {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: var(--section-color);
+    padding: 1.5rem;
+}
+
+.dessert {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*Menu images*/
+
+.appetizer-img1 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/Menu1/hwe.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.appetizer-img2 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/Menu1/japchae.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.appetizer-img3 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 16;
+
+    background-image: url("../img/menu/Menu1/samgyeopsal.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.appetizer-img4 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/Menu2/bulgogi.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.appetizer-img5 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/Menu2/kongnamul_gukbap.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.appetizer-img6 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/Menu2/yangnyeom_tongdak.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-course-img1 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 15;
+
+    background-image: url("../img/menu/Menu1/galbijjim.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-course-img2 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 15;
+
+    background-image: url("../img/menu/Menu1/bibimbap.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-course-img3 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 16;
+
+    background-image: url("../img/menu/Menu2/sannakji.JPG");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-course-img4 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 12;
+
+    background-image: url("../img/menu/Menu2/bossam.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-course-img5 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 12;
+
+    background-image: url("../img/menu/Menu2/doenjang_jjigae.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.dessert-img1 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 16;
+
+    background-image: url("../img/menu/Menu1/patbingsu.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.dessert-img2 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 12;
+
+    background-image: url("../img/menu/Menu1/yakgwa.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.dessert-img3 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 11;
+
+    background-image: url("../img/menu/Menu2/injeolmi_bingsu.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.dessert-img4 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/menu/Menu2/hotteok.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.chef-message {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section-color);
+}
+
+.chef-message-container {
+    width: 70%;
+    height: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    gap: 2rem;
+}
+
+.chef-message-column {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.chef-message-column h1 {
+    text-align: right;
+    color: var(--brown-text-color);
+}
+
+.chef-message-column p {
+    text-align-last: right;
+}
+
+.chef-message-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 3;
+
+    background-image: url("../img/team/executive-chef.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1000px) {
+    /*PRESENTATION*/
+    .menu-presentation-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-presentation-collage {
+        width: 100%;
+    }
+    .presentation-title {
+        display: none;
+    }
+    .secret-presentation-title {
+        display: block;
+    }
+
+    /*CHEF MESSAGE*/
+
+    .chef-message-img {
+        aspect-ratio: 3 / 4;
+    }
+}
+
+@media (max-width: 800px) {
+    /*MENUS*/
+    .menus {
+        flex-direction: column;
+    }
+
+    /*CHEF MESSAGE*/
+    .chef-message-container {
+        flex-direction: column;
+    }
+    .chef-message-img {
+        aspect-ratio: 10 / 9;
+        height: 50vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-presentation-container {
+        width: 90%;
+    }
+
+    .chef-message-container {
+        width: 90%;
+    }
+    .booklet-container {
+        width: 90%;
+    }
+}

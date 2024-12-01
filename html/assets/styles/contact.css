@@ -1,0 +1,395 @@
+/*CONTACT PORTRAIT*/
+
+.contact-portrait {
+    width: 100%;
+    height: auto;
+}
+
+.contact-portrait-img {
+    width: 100%;
+    height: 33vh;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/contact/contact-portrait.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end; 
+    align-items: center; 
+    gap: .5rem; 
+}
+
+.contact-portrait-img h1 {
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+
+    animation: slide-down 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation-delay: 0.4s;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Double Arrow*/
+
+.arrow-icon {
+    width: 8vh;
+    height: 50%; 
+    cursor: pointer; 
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .8));
+    margin-bottom: 1rem;
+}
+
+.double-arrow:hover .arrow-icon {
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-portrait-img a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: slide-down 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/*CONTACT INFO*/
+.contact-info {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-top: 3rem;
+    background-image: url(../img/fondo.jpg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.contact-info-container {
+    width: 70%;
+    height: auto;
+}
+.contact-info-container h1 {
+    text-align: center;
+
+    animation: slide-left 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.info-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+.info-container h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.info1, .info2, .info3 {
+    flex: 1;
+    height: auto;
+    margin: 2rem;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.info1 p, .info2 p, .info3 p {
+    text-align: center;
+    color: var(--white-color);
+}
+
+.info1-img img {
+    animation: rotate-left 1s ease-out forwards;
+    transform: rotate(180deg);
+}
+
+.info2-img img {
+    animation: appearance 1s ease-out forwards;
+}
+
+.info3-img img {
+    animation: rotate-right 1s ease-out forwards;
+    transform: rotate(-180deg);
+}
+
+.info1 p, .info1 h2 {
+    animation: slide-left 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.info2 p, .info2 h2 {
+    animation: slide-up 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.info3 p, .info3 h2 {
+    animation: slide-right 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+@keyframes rotate-left {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate-right {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes appearance {
+    0% {
+        transition: transform 0.5s ease;
+        visibility: hidden;
+        transform: scale(0);
+    }
+    100% {
+        transition: transform 0.5s ease;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.info1-img {
+    width: auto;
+    height: 50%; 
+
+    margin: 3rem;
+    padding: 3rem;
+    background: var(--blue-color);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 0 auto; 
+}
+
+
+.info1-img img, .info2-img img, .info3-img img {
+    width: 3rem;
+    height: auto;
+}
+.info2-img {
+    width: auto;
+    height: 50%; 
+
+    margin: 3rem;
+    padding: 3rem;
+    background: var(--green-color);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 0 auto; 
+}
+.info3-img {
+    width: auto;
+    height: 50%; 
+
+    margin: 3rem;
+    padding: 3rem;
+    background: var(--yellow-color);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 0 auto; 
+}
+/*LOCATION*/
+.location {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: 3rem;
+}
+.location-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.location-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.map-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*RESERVATION*/
+/*selección de colores*/
+:root {
+    --input-color: #ffffff;
+    --input-border-color: #ccc;
+    --button-color: #ccac7a;
+    --button-hover: #9b845d;
+}
+
+.reservation {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.reservation-form-container {
+    width: 70%;
+    height: auto;
+
+    background-color: var(--section-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.reservation-form-container h2 {
+    color: var(--brown-text-color);
+    font-family: LouisGeorgeCafeBold, sans-serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.reservation-form label {
+    color: var(--text-color);
+    font-family: LouisGeorgeCafeBold, sans-serif;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    margin-bottom: 0.5rem;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="date"],
+.reservation-form input[type="number"],
+.reservation-form input[type="time"],
+.reservation-form input[type="tel"],
+.reservation-form input[type="email"] {
+    background-color: var(--input-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    padding: 0.8rem;
+
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reservation-form button {
+    background-color: var(--beige-line-color);
+    color: var(--white-color);
+    border: none;
+    margin-top: 1rem;
+    padding: .8rem;
+    
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    font-family: CaviarDreamsBold, sans-serif;
+
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    grid-column: span 2;
+}
+
+.reservation-form button:hover {
+    background-color: var(--button-hover);
+}
+
+@media (max-width: 650px) {
+    .reservation-form {
+        grid-template-columns: 1fr;
+        gap: 1rem; 
+    }
+
+    .reservation-form button {
+        grid-column: 1; 
+    }
+}

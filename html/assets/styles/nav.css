@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Colores y variables*/
+:root {
+    --background-color: #fffaf5;
+    --section-color: #eae5dd;
+    --text-color: #333;
+    --white-color: #fff;
+    --brown-text-color: #603813;
+    --beige-h3: #907250;
+    --beige-line-color: #C69C6D;
+    --blue-color: rgb(220, 255, 255);
+    --green-color: rgb(219, 255, 229);
+    --yellow-color: rgb(255, 242, 205);
+}
+
+html, body {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: "CaviarDreams";
+    src: url(../fonts/CaviarDreams.ttf) format("truetype"),
+         url(../fonts/caviardreams-webfont.woff2) format("woff2"),
+         url(../fonts/caviardreams-webfont.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "CaviarDreamsBold";
+    src: url(../fonts/CaviarDreams_Bold.ttf) format("truetype"),
+         url(../fonts/caviardreams_bold-webfont.woff2) format("woff2"),
+         url(../fonts/caviardreams_bold-webfont.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "LouisGeorgeCafe";
+    src: url(../fonts/Louis_George_Cafe.ttf) format("truetype"),
+         url(../fonts/louis_george_cafe-webfont.woff2) format("woff2"),
+         url(../fonts/louis_george_cafe-webfont.woff) format("woff"),
+}
+
+@font-face {
+    font-family: "LouisGeorgeCafeBold";
+    src: url(../fonts/Louis_George_Cafe_Bold.ttf) format("truetype"),
+         url(../fonts/louis_george_cafe_bold-webfont.woff2) format("woff2"),
+         url(../fonts/louis_george_cafe_bold-webfont.woff) format("woff"),
+}
+
+/*Parrafos y titulos*/
+
+p {
+    font-family: Montserrat, Calibri;
+    text-align: justify;
+    word-spacing: .2rem;
+    color: var(--text-color);
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
+h1 {
+    font-family: CaviarDreamsBold, sans-serif;
+    font-size: clamp(1.5rem, 1.167rem + 1.111vw, 2.5rem);
+    color: var(--white-color);
+    text-align: justify;
+    font-variant: small-caps;
+}
+
+h2 {
+    font-family: LouisGeorgeCafe;
+    font-size: clamp(1.2rem, 0.933rem + 0.889vw, 2rem);
+    color: var(--white-color);
+    text-align: justify;
+}
+
+h3 {
+    font-family: CaviarDreamsBold;
+    font-size: clamp(1.2rem, 1.067rem + 0.444vw, 1.6rem);
+
+    color: var(--beige-h3);
+    text-align: justify;
+}
+/*MENÚ DE HAMBURGUESA*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: var(--white-color);
+    margin: 3px 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.logo-secreto {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: row nowrap;
+
+    display: none;
+}
+
+.logo-secreto img {
+    width: auto;
+    height: 6vh;
+    padding: .5rem;
+}
+
+/*NAV*/
+
+header {
+    width: 100%;
+    height: 5vh;
+    display: flex; 
+    position: fixed;
+    z-index: 1000;
+    justify-content: flex-start;
+}
+
+.main-nav {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    font-family: NouvellBold, sans-serif;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    color: var(--white-color);
+
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.list-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.list-nav li {
+    margin: 0 3rem;
+    display: inline;
+}
+
+/*Hago transición de la línea del menú*/
+.list-nav li a {
+    position: relative;
+    color: var(--white-color);
+    text-decoration: none;
+}
+  
+.list-nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 2px; 
+    background-color: var(--white-color); 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
+}
+  
+.list-nav li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: right; 
+}
+
+.logo {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: row nowrap;
+}
+
+.logo span {
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+}
+
+.logo img {
+    width: auto;
+    height: 6vh;
+    padding: .5rem;
+}
+
+.nav-section {
+    font-family: CaviarDreamsBold, sans-serif;
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    color: var(--white-color);
+}
+
+/*Guardo esto aquí, porque lo voy a usar mucho en todas las páginas*/
+
+.korean-text {
+    font-family: "Noto Sans KR";
+}
+
+@media (max-width: 800px) {
+    /*BURGER*/
+    .hamburger {
+        display: flex;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    
+    /*Muestro la lista de navegación cuando el checkbox esté activado*/
+    .menu-toggle:checked ~ .list-nav {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .list-nav {
+        opacity: 0;
+        visibility: hidden; 
+        position: fixed;
+
+        width: 100%; 
+        height: 40vh; 
+        top: 0;
+        right: 0;
+        
+        background-image: url(../img/fondo.jpg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 999;
+        transform: translateY(-100%); 
+        transition: none;
+    }
+
+    .menu-toggle:checked ~ .list-nav {
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0s; 
+    }
+
+    .menu-toggle:not(:checked) ~ .list-nav {
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-secreto {
+        display: flex;
+    }
+    
+    .list-nav li {
+        margin: 15px 0;
+    }
+    
+    .list-nav a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    /*Configuración para convertir el menú de hamburguesa en una X al activarse*/
+    .hamburger .bar {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
+        transform: rotate(45deg) translate(7.5px, 7.5px);
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/styles/nav.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/contact.css">
+</head>
+<body>
+    <div class="container">
+        <header role="banner">
+            <nav role="navigation" class="main-nav">
+                <div class="logo-secreto">
+                    <img src="assets/img/logo1.png" alt="Logo">
+                    <span>JUNGSIK</span>
+                </div>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <label for="menu-toggle" class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+                <div class="logo">
+                    <img src="assets/img/logo1.png" alt="Logo">
+                    <span>JUNGSIK</span>
+                </div>
+                <ul class="list-nav">
+                    <li><a href="index.html" class="nav-section">HOME</a></li>
+                    <li><a href="team.html" class="nav-section">TEAM</a></li>
+                    <li><a href="menu.html" class="nav-section">MENU</a></li>
+                    <li><a href="contact.html" class="nav-section">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contact-portrait">
+            <div class="contact-portrait-img">
+                <h1>Contact Us</h1>
+                <a href="#reserve" class="double-arrow">
+                    <img src="assets/img/double-arrow.png" class="arrow-icon">
+                </a>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="contact-info-container">
+                <h1>Get in touch to begin your culinary journey</h1>
+                <div class="info-container">
+                    <div class="info1">
+                        <div class="info1-img">
+                            <img src="assets/img/contact/phone.png" alt="info1">
+                        </div>
+                        <h2>Call Us</h2>
+                        <p>+34 666 62 76 33</p>
+                        <p>+34 629 75 99 23</p>
+                    </div>
+                    <div class="info2">
+                        <div class="info2-img">
+                            <img src="assets/img/contact/mail.png" alt="info2">
+                        </div>
+                        <h2>Email Us</h2>
+                        <p>info@jungsik.com</p>
+                        <p>jungsiknyc@jungsik.com</p>
+                    </div>
+                    <div class="info3">
+                        <div class="info3-img">
+                            <img src="assets/img/contact/clock.png" alt="info3">
+                        </div>
+                        <h2>Opening Hours</h2>
+                        <p>Tuesday - Sunday:</p>
+                        <p>12:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                <div class="location-container">
+                    <h1>Your destination for fine Korean dining</h1>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9631969215493!2d-74.01165002425061!3d40.71882667139259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1fd1cd24a5%3A0xe06d9ff42b6b6f23!2sJungsik!5e0!3m2!1ses!2ses!4v1731517140616!5m2!1ses!2ses" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservation" id="reserve">
+            <div class="reservation-form-container">
+                <h2>Book Your Reservation</h2>
+                <form class="reservation-form">
+                  <!-- Left Column Fields -->
+                  <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                  </div>
+            
+                  <div>
+                    <label for="date">Reservation Date</label>
+                    <input type="date" id="date" name="date" required>
+                  </div>
+            
+                  <div>
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" placeholder="1" required>
+                  </div>
+            
+                  <!-- Right Column Fields -->
+                  <div>
+                    <label for="time">Reservation Time</label>
+                    <input type="time" id="time" name="time" required>
+                  </div>
+            
+                  <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                  </div>
+            
+                  <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                  </div>
+            
+                  <!-- Submit Button -->
+                  <button type="submit">Reserve Now</button>
+                </form>
+              </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-row1">
+                    <aside class="footer-column1">
+                        <div class="footer-logo">
+                            <img src="assets/img/logo1.png" alt="Logo">
+                            <span>JUNGSIK</span>
+                        </div>
+                        <h2>Ready to Book?</h2>
+                            <p>Contact us to secure your reservation and experience our fine dining.</p>
+                            <a href="contact.html#reserve" class="reserve-cta">Reserve Now</a>
+                    </aside>
+                    <span class="white-vertical-line"></span>
+                    <span class="secret-white-horizontal-line"></span>
+                    <aside class="footer-column2">
+                        <h2>Follow Us</h2>
+                        <p>Connect with us to explore the flavors, artistry, and moments that define the Jungsik experience.
+                        </p>
+                        <ul class="social-media">
+                            <li>
+                                <img src="assets/img/facebook.png" alt="Facebook Icon">
+                                <a href="https://www.facebook.com/?locale=es_ES" target="_blank">@JungsikFineDining</a>
+                            </li>
+                            <li>
+                                <img src="assets/img/instagram.png" alt="Instagram Icon">
+                                <a href="https://www.instagram.com/?hl=es" target="_blank">@JunsikExperience</a>
+                            </li>
+                            <li>
+                                <img src="assets/img/tiktok.png" alt="TikTok Icon">
+                                <a href="https://www.tiktok.com/es" target="_blank">@JungsikCuisine</a>
+                            </li>
+                            <li>
+                                <img src="assets/img/x.png" alt="Twitter Icon">
+                                <a href="https://x.com/?lang=es" target="_blank">@JungsikDiningArt</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <span class="white-horizontal-line"></span>
+                <div class="footer-row2">
+                    <p class="copyright">
+                        © 2024 Jungsik. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
