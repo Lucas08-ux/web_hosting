@@ -36,18 +36,19 @@ server {
         auth_basic_user_file /etc/nginx/admin.htpasswd;
     }
 
-    location /status {
-        # Activa el módulo de status
-        stub_status;
-
-        # Restricción de acceso con autenticación
-        auth_basic "Restricted Area";
-        auth_basic_user_file /etc/nginx/status.htpasswd;
-    }
-
     # Bloqueo de acceso a /contact.html con autenticación básica
     location /contact.html {
         auth_basic "Área restringida";
         auth_basic_user_file /etc/nginx/.htpasswd;
+    }
+
+    location /status {
+        proxy_pass http://127.0.0.1:8080/status;  # Redirige las solicitudes a Apache en el puerto 80
+        proxy_set_header Host $host;            # Establece el encabezado de host
+        proxy_set_header X-Real-IP $remote_addr;  # Establece la IP real del cliente
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  # Propaga la cabecera de IP
+
+        auth_basic "Área restringida";
+        auth_basic_user_file /etc/nginx/status.htpasswd;
     }
 }

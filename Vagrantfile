@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
      apt-get install -y git
      apt-get install -y nginx
      apt-get install -y ufw
+     apt-get install apache2 -y
   SHELL
 
   config.vm.define "lucas" do |lucas|
@@ -67,11 +68,6 @@ Vagrant.configure("2") do |config|
       -out /etc/ssl/certs/lucas.com.crt \
       -subj "/C=ES/ST=Andalucia/L=Granada/O=IZV/OU=WEB/CN=lucas.com/emailAddress=webmaster@lucas.com"
 
-    systemctl restart nginx
-    systemctl status nginx
-    systemctl restart ufw
-
-
     sudo apt-get install -y curl
 
     curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
@@ -89,6 +85,16 @@ Vagrant.configure("2") do |config|
 
     sudo sh -c "echo 'sysadmin:$(openssl passwd -apr1 risa)' >> /etc/nginx/status.htpasswd"
 
+    # Activa el módulo de status con apache
+
+    cp -v /vagrant/apache2.conf /etc/apache2/apache2.conf
+    cp -v /vagrant/ports.conf /etc/apache2/ports.conf
+
+    a2enmod status
+    systemctl restart apache2
+    systemctl restart nginx
+    systemctl status nginx
+    systemctl restart ufw
 
     SHELL
   end # lucas
