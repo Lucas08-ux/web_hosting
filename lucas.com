@@ -43,12 +43,12 @@ server {
     }
 
     location /status {
-        proxy_pass http://127.0.0.1:8080/status;  # Redirige las solicitudes a Apache en el puerto 80
+        auth_basic "Área restringida";
+        auth_basic_user_file /etc/nginx/status.htpasswd;
+
+        proxy_pass http://127.0.0.1:8080/status;  # Redirige las solicitudes a Apache en el puerto 8080
         proxy_set_header Host $host;            # Establece el encabezado de host
         proxy_set_header X-Real-IP $remote_addr;  # Establece la IP real del cliente
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  # Propaga la cabecera de IP
-
-        auth_basic "Área restringida";
-        auth_basic_user_file /etc/nginx/status.htpasswd;
     }
 }
